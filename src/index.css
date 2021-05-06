@@ -1,13 +1,183 @@
-body {
+*,
+::after,
+::before {
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.underline {
+  width: 12rem;
+  height: 0.2rem;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background: #14120f;
+  color: #fff;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* LOADING  */
+.loading {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 8px double #ffff;
+  border-top-color: #a90000;
+  animation: 0.3s infinite loadinfinite linear;
+}
+
+.spinner {
+  text-align: center;
+  margin: 15rem auto;
+}
+
+.spinner h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+@keyframes loadinfinite {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  text-align: center;
+  margin: 6rem auto;
+  font-weight: 900;
+  color: #191919;
+}
+
+main {
+  width: 90vw;
+  max-width: 450px;
+  margin: 5rem auto;
+}
+
+.tourism {
+  max-width: 460px;
+  background: #191919;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.192);
+  transition: all 0.3s linear;
+}
+
+.tourism:hover {
+  transform: scale(1.01);
+}
+
+.tourism img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tourism footer {
+  padding: 2rem;
+}
+
+.info-tour {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.price {
+  background: #a3b5bf;
+  color: #061218;
+  padding: 0.15rem;
+  border-radius: 0.25rem;
+}
+
+.info-tour h4 {
+  margin-bottom: 0;
+}
+
+.text-info {
+  text-align: justify;
+  line-height: 1.25;
+  font-weight: 100;
+}
+
+.remove-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 900;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #ff0000;
+  color: #fff;
+}
+
+.readMore {
+  outline: transparent;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  background: #4541a7;
+  padding: 1rem 2rem;
+  color: #fcfbfb;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all linear 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #26245c;
 }
